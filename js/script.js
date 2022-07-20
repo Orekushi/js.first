@@ -1,23 +1,78 @@
 "use strict";
 
-let num = 50;
+const numberOfFilms = +prompt('Скількі фільмів ви вже подивилися?', "");
 
-// while (num <= 55) {
-//     console.log(num);
-//     num++;
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: true
+};
+
+// const a = prompt('Один із останніх переглянутих фільмів?', ""),
+//       b = +prompt('На скільки оціните його?', ""),
+//       c = prompt('Один із останніх переглянутих фільмів?', ""),
+//       d = +prompt('На скільки оціните його?', "");
+
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
+
+
+// for (let i = 0; i <2; i++) {
+//     const a = prompt('Один із останніх переглянутих фільмів?', ""),
+//           b = +prompt('На скільки оціните його?', "");
+
+//     if (a != null && b != null && a != '' && b != '' && a.length <=50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('done');
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
 // }
 
-// do {
-//     console.log(num);
-//     num++;
-// }
-// while (num < 55);
+let num = 0;
 
-for (let i = 1; i < 10; i++) {
-    if (i === 6){
-        // break;
-        continue;
+// while(num < 2) {
+//     const a = prompt('Один із останніх переглянутих фільмів?', ""),
+//           b = +prompt('На скільки оціните його?', "");
+//           num++;
+
+// if (a != null && b != null && a != '' && b != '' && a.length <=50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('done');
+//     } else {
+//         console.log('error');
+//         num--;
+//     }
+// }
+
+do {
+    const a = prompt('Один із останніх переглянутих фільмів?', ""),
+          b = +prompt('На скільки оціните його?', "");
+          num++;
+
+if (a != null && b != null && a != '' && b != '' && a.length <=50) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        num--;
     }
+} 
+while (num <2);
 
-    console.log(i);
-}
+
+
+// if (personalMovieDB.count < 10) {
+//     console.log("Переглянуто досить мало фільмів");
+// } else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30) {
+//     console.log("Ви класичний глядач");
+// } else if (personalMovieDB.count > 30) {
+//     console.log("Ви кіноман");
+// } else {
+//     console.log("Помилка");
+// }
+
+console.log(personalMovieDB);
