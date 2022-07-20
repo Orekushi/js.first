@@ -1,23 +1,23 @@
 "use strict";
 
-// console.log('arr'+" – obj");
-// console.log(4 + "2");
+let num = 50;
 
-let incr = 10,
-    decr = 10;
+// while (num <= 55) {
+//     console.log(num);
+//     num++;
+// }
 
-// incr++;
-// decr--;
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num < 55);
 
-console.log(++incr);
-console.log(--decr);
+for (let i = 1; i < 10; i++) {
+    if (i === 6){
+        // break;
+        continue;
+    }
 
-console.log(5%2);
-
-console.log(2*4 === '8');
-
-const isChecked = false;
-      isClose = false;
-
-console.log(isChecked || !isClose);
-    
+    console.log(i);
+}
